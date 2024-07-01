@@ -52,5 +52,15 @@ vim.api.nvim_create_autocmd({"FileType"}, {
    command = "autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent update | endif",
 })
 
+-- Trim trailing whitespace on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = {"*"},
+    callback = function(ev)
+        save_cursor = vim.fn.getpos(".")
+        vim.cmd([[%s/\s\+$//e]])
+        vim.fn.setpos(".", save_cursor)
+    end,
+})
+
 vim.opt.termguicolors = true
 vim.cmd "colorscheme tokyonight"
