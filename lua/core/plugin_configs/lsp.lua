@@ -1,7 +1,6 @@
-
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "tsserver", "pyright", "clangd" },
+    ensure_installed = { "ts_ls", "pyright", "clangd" },
     automatic_installation = true,
 })
 
