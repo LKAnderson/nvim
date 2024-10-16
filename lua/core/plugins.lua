@@ -29,7 +29,6 @@ require("lazy").setup({
     {'nvim-lualine/lualine.nvim'},
     {'nvim-treesitter/nvim-treesitter'},
     {'nvim-telescope/telescope.nvim'},
-    {'jim-at-jibba/micropython.nvim', dependencies = {'akinsho/toggleterm.nvim', 'stevearc/dressing.nvim'}},
     {'normen/vim-pio'},
     {'coddingtonbear/neomake-platformio'},
 })

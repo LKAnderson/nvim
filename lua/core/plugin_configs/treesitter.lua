@@ -1,31 +1,24 @@
 require("nvim-treesitter.configs").setup {
-    ensure_installed = { 
-        "c", 
-        "cpp", 
-        "lua", 
-        "python", 
-        "fish", 
-        "json", 
-        "yaml", 
-        "html", 
-        "css", 
-        "javascript", 
-        "typescript", 
-        "tsx", 
-        "swift" 
+    ensure_installed = {
+        "c",
+        "cpp",
+        "lua",
+        "python",
+        "fish",
+        "json",
+        "yaml",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "swift",
+        "kotlin"
     },
-    highlight = {
-        enable = true,
-    },
-    indent = {
-        enable = true,
-    },
-    autotag = {
-        enable = true,
-    },
-    context_commentstring = {
-        enable = true,
-    },
+    highlight = { enable = true, },
+    indent = { enable = true, },
+    autotag = { enable = true, },
+    context_commentstring = { enable = true, },
     textobjects = {
         select = {
             enable = true,
