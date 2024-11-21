@@ -25,7 +25,7 @@ vim.opt.diffopt = "filler,iwhite"
 vim.opt.showmatch = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.wildignore = "*.o,*.obj,*~,*.pyc,__pycache__,*.class,**/node_modules/**,dist/**,build/**,target/**,.git/**,.svn/**,CVS/**,vendor/**,*.egg-info/**,*.egg/**,*.log,**/tmp/**"
+vim.opt.wildignore = "*.o,*.obj,*~,*.pyc,__pycache__,*.class,**/node_modules/**,**/dist/**,**/build/**,**/target/**,.git/**,.svn/**,CVS/**,vendor/**,*.egg-info/**,*.egg/**,*.log,**/tmp/**"
 
 vim.cmd "syntax on"
 vim.cmd "filetype on"

@@ -13,7 +13,8 @@ require("nvim-treesitter.configs").setup {
         "typescript",
         "tsx",
         "swift",
-        "kotlin"
+        "kotlin",
+        "http",
     },
     highlight = { enable = true, },
     indent = { enable = true, },

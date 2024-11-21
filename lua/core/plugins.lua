@@ -31,6 +31,7 @@ require("lazy").setup({
     {'nvim-telescope/telescope.nvim'},
     {'normen/vim-pio'},
     {'coddingtonbear/neomake-platformio'},
+    {'rest-nvim/rest.nvim'},
 })
 
 require("core.plugin_configs")
