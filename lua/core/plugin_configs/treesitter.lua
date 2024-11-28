@@ -1,8 +1,13 @@
 require("nvim-treesitter.configs").setup {
     ensure_installed = {
+        -- obligatory parsers
         "c",
-        "cpp",
         "lua",
+        "vim",
+        "vimdoc",
+        "markdown",
+        -- end obligatory
+        "cpp",
         "python",
         "fish",
         "json",
