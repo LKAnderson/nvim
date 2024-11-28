@@ -1,6 +1,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "ts_ls", "pyright", "clangd" },
+    ensure_installed = {
+        "ts_ls",
+        "pyright",
+        "clangd",
+    },
     automatic_installation = true,
 })
 
@@ -10,7 +14,10 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 local lspconfig = require("lspconfig")
-lspconfig.ts_ls.setup({})
+lspconfig.ts_ls.setup {}
+
+lspconfig.clangd.setup {
+}
 
 -- The following code came from https://vonheikemen.github.io/devlog/tools/neovim-lsp-client-guide/.
 -- Thanks, man!
