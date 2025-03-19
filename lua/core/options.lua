@@ -40,6 +40,8 @@ vim.g.netrw_list_hide = ".DS_Store"
 
 vim.cmd "nnoremap t :NvimTreeFocus<CR>"
 vim.cmd "nnoremap gb :ls<CR>:b "
+vim.cmd "nnoremap M :lua vim.diagnostic.open_float()<CR>"
+vim.cmd "nnoremap gca :lua vim.lsp.buf.code_action()<CR>"
 
 -- Setup autosave
 vim.opt.updatetime = 1000
