@@ -38,7 +38,7 @@ vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 1
 vim.g.netrw_list_hide = ".DS_Store"
 
-vim.cmd "nnoremap - :NvimTreeFocus<CR>"
+vim.cmd "nnoremap t :NvimTreeFocus<CR>"
 vim.cmd "nnoremap gb :ls<CR>:b "
 
 -- Setup autosave

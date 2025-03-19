@@ -3,6 +3,17 @@ require("nvim-tree").setup {
     sorter = "name",
     folders_first = true,
   },
+  view = {
+    width = {
+      min = 30,
+      max = -1,
+      padding = 2,
+    },
+    float = {
+      enable = true,
+      quit_on_focus_loss = true,
+    },
+  },
   renderer = {
     group_empty = true,
     highlight_git = all,
@@ -16,3 +27,4 @@ require("nvim-tree").setup {
     update_cwd = false,
   },
 }
+
