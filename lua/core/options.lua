@@ -32,11 +32,13 @@ vim.cmd "filetype on"
 vim.cmd "filetype plugin on"
 vim.cmd "filetype plugin indent on"
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 1
 vim.g.netrw_list_hide = ".DS_Store"
 
-vim.cmd "nnoremap - :e %:h<CR>"
+vim.cmd "nnoremap - :NvimTreeFocus<CR>"
 vim.cmd "nnoremap gb :ls<CR>:b "
 
 -- Setup autosave
