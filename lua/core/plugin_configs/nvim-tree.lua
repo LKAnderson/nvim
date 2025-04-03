@@ -10,8 +10,8 @@ require("nvim-tree").setup {
       padding = 2,
     },
     float = {
-      enable = true,
-      quit_on_focus_loss = true,
+      enable = false,
+      quit_on_focus_loss = false,
     },
   },
   renderer = {

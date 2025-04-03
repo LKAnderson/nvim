@@ -35,6 +35,7 @@ require("lazy").setup({
   {'nvim-tree/nvim-tree.lua', lazy = false, dependencies = {
     "nvim-web-devicons",
   }},
+  {'numToStr/Comment.nvim'},
 })
 
 require("core.plugin_configs")
