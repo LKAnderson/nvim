@@ -35,6 +35,8 @@ require("lazy").setup({
   {"nvim-tree/nvim-tree.lua", lazy = false, dependencies = { "nvim-web-devicons", }},
   {"numToStr/Comment.nvim"},
   {"pocco81/auto-save.nvim"},
+  {"vimlab/split-term.vim"},
+  {"nvim-zh/colorful-winsep.nvim"},
 })
 
 require("core.plugin_configs")

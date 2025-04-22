@@ -39,19 +39,36 @@ vim.g.netrw_liststyle = 1
 vim.g.netrw_list_hide = ".DS_Store"
 
 vim.cmd "nnoremap t :NvimTreeFocus<CR>"
--- vim.cmd "nnoremap gb :ls<CR>:b "
 vim.cmd "nnoremap gm :lua vim.diagnostic.open_float()<CR>"
 vim.cmd "nnoremap gca :lua vim.lsp.buf.code_action()<CR>"
 
 -- Trim trailing whitespace on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern = {"*"},
-    callback = function(ev)
-        save_cursor = vim.fn.getpos(".")
-        vim.cmd([[%s/\s\+$//e]])
-        vim.fn.setpos(".", save_cursor)
-    end,
+  pattern = {"*"},
+  callback = function(ev)
+    save_cursor = vim.fn.getpos(".")
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.setpos(".", save_cursor)
+  end,
 })
 
 vim.opt.termguicolors = true
 vim.cmd "colorscheme tokyonight"
+
+-- GUI stuff
+if vim.g.neovide then
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_cursor_short_animation_length = 0
+  vim.g.neovide_cursor_animate_in_insert_mode = false
+  vim.g.neovide_cursor_animate_command_line = false
+  vim.g.neovide_cursor_trail_size = 0
+
+  vim.g.neovide_floating_blur_amount_x = 2.5
+  vim.g.neovide_floating_blur_amount_y = 2.5
+
+  vim.g.neovide_floating_shadow = true
+  vim.g.neovide_floating_z_height = 10
+  vim.g.neovide_light_angle_degrees = 45
+  vim.g.neovide_light_radius = 5
+
+end
