@@ -43,20 +43,6 @@ vim.cmd "nnoremap t :NvimTreeFocus<CR>"
 vim.cmd "nnoremap gm :lua vim.diagnostic.open_float()<CR>"
 vim.cmd "nnoremap gca :lua vim.lsp.buf.code_action()<CR>"
 
--- Setup autosave
-vim.opt.updatetime = 1000
-local autosave_group = vim.api.nvim_create_augroup("autosave", { clear = true })
-vim.api.nvim_create_autocmd({"BufRead"}, {
-   pattern = "*",
-   group = autosave_group,
-   command = 'if &filetype == "" | setlocal ft=text | endif',
-})
-vim.api.nvim_create_autocmd({"FileType"}, {
-   pattern = "*",
-   group = autosave_group,
-   command = "autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent update | endif",
-})
-
 -- Trim trailing whitespace on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = {"*"},
