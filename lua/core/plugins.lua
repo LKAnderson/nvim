@@ -23,6 +23,7 @@ require("lazy").setup({
   {"L3MON4D3/LuaSnip"},
   {"folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},},
   {"tpope/vim-fugitive"},
+  {"lewis6991/gitsigns.nvim"},
   {"github/copilot.vim"},
   {"mfussenegger/nvim-dap"},
   {"rcarriga/nvim-dap-ui"},
