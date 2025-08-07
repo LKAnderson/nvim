@@ -39,6 +39,7 @@ require("lazy").setup({
   {"pocco81/auto-save.nvim"},
   {"vimlab/split-term.vim"},
   {"nvim-zh/colorful-winsep.nvim"},
+  {"HiPhish/rainbow-delimiters.nvim"},
 })
 
 require("core.plugin_configs")

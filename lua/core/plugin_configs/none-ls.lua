@@ -8,14 +8,20 @@ null_ls.setup({
     }),
   },
   on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      -- Format on save
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 1000 })
-        end,
-      })
-    end
+    -- Auto formatting has some irritating interactions with auto-saving....
+    --
+    -- if client.supports_method("textDocument/formatting") then
+    --   -- Format on save
+    --   vim.api.nvim_create_autocmd("BufWritePre", {
+    --     buffer = bufnr,
+    --     callback = function()
+    --       vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 1000 })
+    --     end,
+    --   })
+    -- end
   end,
 })
+
+vim.keymap.set("n", "<leader>fmt", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format current buffer" })
