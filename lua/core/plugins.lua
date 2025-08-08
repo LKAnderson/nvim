@@ -40,6 +40,7 @@ require("lazy").setup({
   {"vimlab/split-term.vim"},
   {"nvim-zh/colorful-winsep.nvim"},
   {"HiPhish/rainbow-delimiters.nvim"},
+  {"LhKipp/nvim-nu"},
 })
 
 require("core.plugin_configs")
