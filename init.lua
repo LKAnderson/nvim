@@ -92,6 +92,12 @@ vim.cmd "nnoremap t :NvimTreeFocus<CR>"
 vim.cmd "nnoremap gm :lua vim.diagnostic.open_float()<CR>"
 vim.cmd "nnoremap gca :lua vim.lsp.buf.code_action()<CR>"
 
+vim.cmd "vnoremap <D-c> \"+y"
+vim.cmd "xnoremap <D-c> \"+y"
+vim.cmd "vnoremap <D-x> \"+yd"
+vim.cmd "xnoremap <D-x> \"+yd"
+vim.cmd "inoremap <D-v> <Esc>\"+Pa"
+
 -- Trim trailing whitespace on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = {"*"},
