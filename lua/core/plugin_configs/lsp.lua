@@ -5,7 +5,6 @@ require("mason-lspconfig").setup({
         "pyright",
         "clangd",
     },
-    automatic_installation = true,
 })
 
 local lsp_zero = require("lsp-zero")
@@ -13,11 +12,13 @@ lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-local lspconfig = require("lspconfig")
-lspconfig.ts_ls.setup {}
+-- Configure LSP servers using the new vim.lsp.config API
+vim.lsp.config('*', {
+    root_markers = { '.git' }
+})
 
-lspconfig.clangd.setup {
-}
+-- Note: mason-lspconfig automatically enables all servers in ensure_installed
+-- via its automatic_enable feature (enabled by default since v2.0.0)
 
 -- The following code came from https://vonheikemen.github.io/devlog/tools/neovim-lsp-client-guide/.
 -- Thanks, man!

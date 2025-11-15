@@ -19,7 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
-  {"neovim/nvim-lspconfig"},
   {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
   {"nvimtools/none-ls.nvim", dependencies = { "nvim-lua/plenary.nvim", }},
   {"hrsh7th/cmp-nvim-lsp"},
@@ -28,7 +27,7 @@ require("lazy").setup({
   {"folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},},
   {"tpope/vim-fugitive"},
   {"lewis6991/gitsigns.nvim"},
-  {"github/copilot.vim"},
+  -- {"github/copilot.vim"},
   {"mfussenegger/nvim-dap"},
   {"rcarriga/nvim-dap-ui"},
   {"nvim-lualine/lualine.nvim"},
@@ -43,7 +42,6 @@ require("lazy").setup({
   {"vimlab/split-term.vim"},
   {"nvim-zh/colorful-winsep.nvim"},
   {"HiPhish/rainbow-delimiters.nvim"},
-  {"LhKipp/nvim-nu"},
 })
 
 require("core.plugin_configs")
